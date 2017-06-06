@@ -1,0 +1,27 @@
+Instructions to Compile:
+
+The program should be executed in an IDLE (python GUI)
+
+By default:
+1) The code for performing 'AllMatches' & 'HierarchicalClustering' is enabled
+			Note: 	a) The directory name for 'AllMatches' must be 'images' and 
+					b) The directory & the python file should be placed under the same parent directory ("c:/cv/images" & "c:/cv/hw3.py")
+2) The keypoints function is used by other functions, so it has only the SURF enabled. SIFT and writing to files has been disabled.
+--------------------------------------------------------------------------------------------------------
+
+1) To execute only Keypoints with SIFT and SURF:
+	Uncomment: lines 19-31 (inclusive), 39-41 (inclusive), 45-46, and 225
+	Comment: lines 43(return statement), 226-228 (inclusive)
+	
+	Pass the required image (image should be present in the same directory as the python file) and run the code
+	
+2) To execute Only Matching, keep the default settings:
+	Uncomment only line 226 (matching function) 
+	
+	Pass the required images (images should be present in the same directory as the python file) and run the code
+
+3) To execute AllMatches, execute in the default settings. if only 'AllMatches' is needed without 'HierarchicalClustering' then
+	Comment line 228 (hClustering function)
+
+4) Only 'HierarchicalClustering' CAN NOT run separately, it needs a Distance Matrix which is obtained using 'AllMatches' function.
+	This is the default settings
